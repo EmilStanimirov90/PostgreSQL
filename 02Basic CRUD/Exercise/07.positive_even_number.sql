@@ -1,5 +1,4 @@
 SELECT 
-	id,
 	CONCAT_WS(
 	' ',
 	number,
@@ -10,4 +9,7 @@ SELECT
 FROM 
 	addresses
 WHERE 
-	id >= 20
+    city_id % 2 = 0
+    AND
+    city_id > 0
+ORDER BY city_id
